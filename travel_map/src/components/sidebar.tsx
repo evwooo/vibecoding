@@ -2,11 +2,7 @@
 
 import { useState, useRef } from "react";
 import type { Location } from "@/app/page";
-<<<<<<< HEAD
 import { LOCATION_CATEGORIES } from "@/lib/constants";
-=======
-import { LOCATION_CATEGORIES } from "@/app/page";
->>>>>>> main
 import LocationSearch from "./location-search";
 
 interface SidebarProps {

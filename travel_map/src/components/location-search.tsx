@@ -1,16 +1,9 @@
 "use client";
 
-<<<<<<< HEAD
 import { useState, useEffect, useRef } from "react";
 import { useMapsLibrary } from "@vis.gl/react-google-maps";
 import type { Location } from "@/app/page";
 import { LOCATION_CATEGORIES } from "@/lib/constants";
-=======
-import { useRef, useEffect, useState } from "react";
-import { useMapsLibrary } from "@vis.gl/react-google-maps";
-import type { Location } from "@/app/page";
-import { LOCATION_CATEGORIES } from "@/app/page";
->>>>>>> main
 
 interface LocationSearchProps {
   onPlaceSelect: (location: Omit<Location, 'id'>) => void;
