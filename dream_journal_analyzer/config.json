@@ -1,0 +1,51 @@
+{
+  "data_file": "dreams.json",
+  "backup_enabled": true,
+  "backup_frequency": "daily",
+  "max_backups": 7,
+  "export_format": "json",
+  "date_format": "%Y-%m-%d %H:%M:%S",
+  "visualization": {
+    "default_chart_size": [
+      12,
+      8
+    ],
+    "color_scheme": "default",
+    "save_charts": true,
+    "chart_directory": "charts"
+  },
+  "analysis": {
+    "min_dreams_for_analysis": 5,
+    "pattern_threshold": 0.3,
+    "emotion_categories": {
+      "positive": [
+        "happy",
+        "joy",
+        "excited",
+        "peaceful",
+        "love",
+        "content"
+      ],
+      "negative": [
+        "sad",
+        "fear",
+        "angry",
+        "anxious",
+        "confused",
+        "frustrated"
+      ],
+      "neutral": [
+        "curious",
+        "calm",
+        "indifferent",
+        "focused"
+      ]
+    }
+  },
+  "ui": {
+    "show_colors": true,
+    "show_emojis": true,
+    "page_size": 10,
+    "auto_save": true
+  }
+}
