@@ -121,15 +121,12 @@ export default function Map({ locations, selectedLocation }: MapProps) {
         gestureHandling={"greedy"}
         disableDefaultUI={false}
         style={{ width: "100%", height: "100%" }}
-        options={{
-          zoomControl: true,
-          mapTypeControl: true,
-          scaleControl: true,
-          streetViewControl: true,
-          rotateControl: true,
-          fullscreenControl: true,
-          gestureHandling: "greedy",
-        }}
+        zoomControl={true}
+        mapTypeControl={true}
+        scaleControl={true}
+        streetViewControl={true}
+        rotateControl={true}
+        fullscreenControl={true}
       >
         {locations.map((location) => (
           <AdvancedMarker
