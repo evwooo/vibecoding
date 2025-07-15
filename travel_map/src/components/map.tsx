@@ -1,12 +1,13 @@
 "use client";
 
-import { Map as GoogleMap, AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
+import { Map as GoogleMap, AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import { useEffect, useState, useCallback } from "react";
 import type { Location } from "@/app/page";
 
 interface MapProps {
   locations: Location[];
   selectedLocation: Location | null;
+  onDeselectLocation?: () => void;
 }
 
 // Category to color mapping
@@ -37,11 +38,11 @@ const CATEGORY_EMOJIS: { [key: string]: string } = {
   'Other': '📍'
 };
 
-export default function Map({ locations, selectedLocation }: MapProps) {
+export default function Map({ locations, selectedLocation, onDeselectLocation }: MapProps) {
   const [center, setCenter] = useState({ lat: 20, lng: 0 });
   const [zoom, setZoom] = useState(2);
   const [activeMarker, setActiveMarker] = useState<string | null>(null);
-  const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
+  const mapInstance = useMap();
 
   useEffect(() => {
     if (selectedLocation) {
@@ -56,6 +57,13 @@ export default function Map({ locations, selectedLocation }: MapProps) {
     setCenter({ lat: location.lat, lng: location.lng });
     setZoom(Math.max(zoom, 10));
   }, [activeMarker, zoom]);
+
+  // Handle map interactions that should deselect the current location
+  const handleMapInteraction = useCallback(() => {
+    if (selectedLocation && onDeselectLocation) {
+      onDeselectLocation();
+    }
+  }, [selectedLocation, onDeselectLocation]);
 
   const renderStars = (rating: number) => {
     return (
@@ -127,6 +135,8 @@ export default function Map({ locations, selectedLocation }: MapProps) {
         streetViewControl={true}
         rotateControl={true}
         fullscreenControl={true}
+        onDragend={handleMapInteraction}
+        onZoomChanged={handleMapInteraction}
       >
         {locations.map((location) => (
           <AdvancedMarker
