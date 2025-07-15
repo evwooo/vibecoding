@@ -1,0 +1,190 @@
+[
+  {
+    "title": "Flying Over Mountains",
+    "content": "I was soaring through the clouds above snow-capped mountains, feeling completely free and peaceful. The wind was gentle and I could see eagles flying beside me.",
+    "emotions": [
+      "peaceful",
+      "free",
+      "wonder",
+      "awe"
+    ],
+    "characters": [
+      "myself",
+      "eagles"
+    ],
+    "themes": [
+      "flight",
+      "nature",
+      "mountains",
+      "freedom"
+    ],
+    "lucid": true,
+    "nightmare": false,
+    "date": "2025-07-15T19:14:46.656362",
+    "id": "5c845bf0"
+  },
+  {
+    "title": "Underwater Castle",
+    "content": "I was swimming through clear blue water and discovered a magnificent underwater castle with glowing coral gardens. Colorful fish swam around me as I explored the ancient halls filled with treasures.",
+    "emotions": [
+      "curious",
+      "wonder",
+      "excited",
+      "peaceful"
+    ],
+    "characters": [
+      "myself",
+      "fish"
+    ],
+    "themes": [
+      "water",
+      "exploration",
+      "discovery",
+      "treasure"
+    ],
+    "lucid": false,
+    "nightmare": false,
+    "date": "2025-07-15T19:14:54.541341",
+    "id": "35b4fcfc"
+  },
+  {
+    "title": "Chase Dream",
+    "content": "I was running through a dark forest being chased by shadows. I felt terrified but kept running until I found a bright clearing where I felt safe.",
+    "emotions": [
+      "fear",
+      "anxiety",
+      "relief"
+    ],
+    "characters": [],
+    "themes": [
+      "chase",
+      "danger",
+      "forest",
+      "safety"
+    ],
+    "lucid": false,
+    "nightmare": true,
+    "date": "2025-07-15T19:15:03.615841",
+    "id": "23ee4909"
+  },
+  {
+    "title": "Soaring Through Clouds",
+    "content": "I realized I was dreaming and decided to fly. I soared above the clouds, feeling the wind beneath me. The landscape below was breathtaking - rolling hills covered in emerald grass.",
+    "emotions": [
+      "free",
+      "joyful",
+      "peaceful",
+      "amazed"
+    ],
+    "characters": [
+      "myself"
+    ],
+    "themes": [
+      "flight",
+      "nature",
+      "lucid",
+      "landscape"
+    ],
+    "lucid": true,
+    "nightmare": false,
+    "date": "2025-07-15T19:15:47.260005",
+    "id": "8d3e86ee"
+  },
+  {
+    "title": "Deep Sea Adventure",
+    "content": "I was diving in crystal clear water and discovered a sunken ship. Colorful fish swam around me, and I found a treasure chest filled with ancient coins.",
+    "emotions": [
+      "curious",
+      "excited",
+      "wonder",
+      "peaceful"
+    ],
+    "characters": [
+      "myself",
+      "fish"
+    ],
+    "themes": [
+      "water",
+      "exploration",
+      "treasure",
+      "discovery"
+    ],
+    "lucid": false,
+    "nightmare": false,
+    "date": "2025-07-15T19:15:47.260444",
+    "id": "f1fefd1b"
+  },
+  {
+    "title": "Dark Forest Chase",
+    "content": "I was running through a dark forest, something was chasing me. I couldn't see what it was, but I could hear footsteps behind me. Finally, I found a cabin where I felt safe.",
+    "emotions": [
+      "fear",
+      "anxiety",
+      "panic",
+      "relief"
+    ],
+    "characters": [
+      "myself",
+      "unknown pursuer"
+    ],
+    "themes": [
+      "chase",
+      "forest",
+      "darkness",
+      "safety"
+    ],
+    "lucid": false,
+    "nightmare": true,
+    "date": "2025-07-15T19:15:47.261717",
+    "id": "910678d0"
+  },
+  {
+    "title": "Exam Day Confusion",
+    "content": "I was back in school and had to take an exam I hadn't studied for. The classroom kept changing, and I couldn't find my pencil.",
+    "emotions": [
+      "confused",
+      "anxious",
+      "frustrated"
+    ],
+    "characters": [
+      "myself",
+      "classmates",
+      "teacher"
+    ],
+    "themes": [
+      "school",
+      "exam",
+      "confusion",
+      "unprepared"
+    ],
+    "lucid": false,
+    "nightmare": false,
+    "date": "2025-07-15T19:15:47.262582",
+    "id": "cfa63fbe"
+  },
+  {
+    "title": "Family Reunion",
+    "content": "I was at a family gathering in my childhood home. Everyone was laughing and sharing stories. The house felt warm and filled with love.",
+    "emotions": [
+      "happy",
+      "nostalgic",
+      "loved",
+      "content"
+    ],
+    "characters": [
+      "myself",
+      "family",
+      "relatives"
+    ],
+    "themes": [
+      "family",
+      "home",
+      "nostalgia",
+      "gathering"
+    ],
+    "lucid": false,
+    "nightmare": false,
+    "date": "2025-07-15T19:15:47.263238",
+    "id": "e8161f04"
+  }
+]
