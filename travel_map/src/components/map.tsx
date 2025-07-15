@@ -21,13 +21,23 @@ export default function Map({ locations, selectedLocation }: MapProps) {
   }, [selectedLocation]);
 
   return (
-    <div className="flex-grow h-full">
+    <div className="flex-grow h-full w-full">
       <GoogleMap
         mapId={"travel_map"}
         center={center}
         zoom={zoom}
         gestureHandling={"greedy"}
-        disableDefaultUI={true}
+        disableDefaultUI={false}
+        style={{ width: "100%", height: "100%" }}
+        options={{
+          zoomControl: true,
+          mapTypeControl: true,
+          scaleControl: true,
+          streetViewControl: true,
+          rotateControl: true,
+          fullscreenControl: true,
+          gestureHandling: "greedy",
+        }}
       >
         {locations.map((location, index) => (
           <AdvancedMarker key={index} position={location} title={location.name} />
