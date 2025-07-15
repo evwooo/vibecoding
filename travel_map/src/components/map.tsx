@@ -113,25 +113,22 @@ export default function Map({ locations, selectedLocation }: MapProps) {
   }, [mapInstance, locations]);
 
   return (
-    <div className="flex-grow h-full relative">
+    <div className="flex-grow h-full w-full">
       <GoogleMap
         mapId={"travel_map"}
         center={center}
         zoom={zoom}
         gestureHandling={"greedy"}
         disableDefaultUI={false}
-        mapTypeControl={true}
-        streetViewControl={true}
-        fullscreenControl={true}
-        onLoad={(map) => setMapInstance(map)}
+        style={{ width: "100%", height: "100%" }}
         options={{
-          styles: [
-            {
-              featureType: "poi",
-              elementType: "labels",
-              stylers: [{ visibility: "on" }]
-            }
-          ]
+          zoomControl: true,
+          mapTypeControl: true,
+          scaleControl: true,
+          streetViewControl: true,
+          rotateControl: true,
+          fullscreenControl: true,
+          gestureHandling: "greedy",
         }}
       >
         {locations.map((location) => (
