@@ -1,10 +1,6 @@
 "use client";
 
-<<<<<<< HEAD
 import { Map as GoogleMap, AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
-=======
-import { Map as GoogleMap, AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
->>>>>>> main
 import { useEffect, useState, useCallback } from "react";
 import type { Location } from "@/app/page";
 
@@ -42,19 +38,11 @@ const CATEGORY_EMOJIS: { [key: string]: string } = {
   'Other': '📍'
 };
 
-<<<<<<< HEAD
 export default function Map({ locations, selectedLocation, onDeselectLocation }: MapProps) {
   const [center, setCenter] = useState({ lat: 20, lng: 0 });
   const [zoom, setZoom] = useState(2);
   const [activeMarker, setActiveMarker] = useState<string | null>(null);
   const mapInstance = useMap();
-=======
-export default function Map({ locations, selectedLocation }: MapProps) {
-  const [center, setCenter] = useState({ lat: 20, lng: 0 });
-  const [zoom, setZoom] = useState(2);
-  const [activeMarker, setActiveMarker] = useState<string | null>(null);
-  const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
->>>>>>> main
 
   useEffect(() => {
     if (selectedLocation) {
@@ -70,7 +58,6 @@ export default function Map({ locations, selectedLocation }: MapProps) {
     setZoom(Math.max(zoom, 10));
   }, [activeMarker, zoom]);
 
-<<<<<<< HEAD
   // Handle map interactions that should deselect the current location
   const handleMapInteraction = useCallback(() => {
     if (selectedLocation && onDeselectLocation) {
@@ -78,8 +65,6 @@ export default function Map({ locations, selectedLocation }: MapProps) {
     }
   }, [selectedLocation, onDeselectLocation]);
 
-=======
->>>>>>> main
   const renderStars = (rating: number) => {
     return (
       <div className="flex items-center space-x-1">
@@ -150,11 +135,8 @@ export default function Map({ locations, selectedLocation }: MapProps) {
         streetViewControl={true}
         rotateControl={true}
         fullscreenControl={true}
-<<<<<<< HEAD
         onDragend={handleMapInteraction}
         onZoomChanged={handleMapInteraction}
-=======
->>>>>>> main
       >
         {locations.map((location) => (
           <AdvancedMarker
