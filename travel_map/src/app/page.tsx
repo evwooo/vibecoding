@@ -16,19 +16,6 @@ export interface Location {
   rating: number;
 }
 
-export const LOCATION_CATEGORIES = [
-  "Restaurant",
-  "Tourist Attraction",
-  "Hotel",
-  "Beach",
-  "Museum",
-  "Park",
-  "Shopping",
-  "Entertainment",
-  "Transportation",
-  "Other"
-];
-
 const LOCATION_STORAGE_KEY = "visited_locations";
 
 export default function Home() {
@@ -44,7 +31,7 @@ export default function Home() {
       if (savedLocations) {
         const parsedLocations = JSON.parse(savedLocations);
         // Migrate old locations to new format
-        const migratedLocations = parsedLocations.map((location: any, index: number) => ({
+        const migratedLocations = parsedLocations.map((location: Partial<Location>, index: number) => ({
           id: location.id || `location-${index}`,
           name: location.name,
           lat: location.lat,
@@ -98,6 +85,10 @@ export default function Home() {
     if (selectedLocation?.id === id) {
       setSelectedLocation(null);
     }
+  };
+
+  const onDeselectLocation = () => {
+    setSelectedLocation(null);
   };
 
   const exportLocations = () => {
@@ -164,7 +155,7 @@ export default function Home() {
           onExportLocations={exportLocations}
           onImportLocations={importLocations}
         />
-        <Map locations={locations} selectedLocation={selectedLocation} />
+        <Map locations={locations} selectedLocation={selectedLocation} onDeselectLocation={onDeselectLocation} />
       </div>
     </APIProvider>
   );
