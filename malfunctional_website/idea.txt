@@ -1,0 +1,6 @@
+a malfunctional website that does not work as it should. 
+highlights common website errors in an interactive way
+for learning best coding practices and preventing errors
+essentially, this website should turn "error pages" into intentional endpoints
+it should explain why certain errors occur and how to prevent them
+the error pages should be informative, neat, and using modern UI and colors

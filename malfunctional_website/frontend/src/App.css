@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #61dafb;
+  --background-color: #282c34;
+  --text-color: #ffffff;
+  --card-background: #3a3f47;
+  --error-color: #ff6b6b;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card-background);
+}
+
+.nav-logo {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.content {
+  padding: 2rem;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.error-explanation {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  text-align: left;
+  border-left: 5px solid var(--primary-color);
+}
+
+.error-explanation h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.error-explanation code {
+  background-color: #282c34;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.demo-area {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px dashed var(--primary-color);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.demo-area h3 {
+  margin-top: 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4aa8c5;
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.broken-image {
+  width: 200px;
+  height: 200px;
+  background-color: var(--card-background);
+  border: 2px solid var(--error-color);
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+}
+
+.broken-image::after {
+    content: 'Broken Image';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--error-color);
+}
