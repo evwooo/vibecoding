@@ -30,7 +30,7 @@ def main():
             pyautogui.press('space')
             
             # Wait for a random interval between 10 and 30 seconds.
-            sleep_duration = random.randint(10, 30)
+            sleep_duration = random.randint(60, 90)
             print(f"Next action in {sleep_duration} seconds...")
             time.sleep(sleep_duration)
             
